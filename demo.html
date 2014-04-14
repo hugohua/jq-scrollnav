@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <title>scrollnav demo</title>
+    <meta name="Copyright" content="ghugo.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="//oxox.io/assets/js/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.scrollnav.js"></script>
+    <style type="text/css">
+        /*点*/
+        *{margin: 0; padding: 0;}
+        .ju_scroll{position: fixed; z-index: 10; top: 300px; right: 100px; _position: absolute}
+        .ju_scroll a{ width: 20px; height: 20px; display: block; position: relative; font-size: 0; border-radius: 50%; margin: 8px 0; cursor: pointer;background-color: #b5b5b5; }
+
+        .ju_scroll a:hover,
+        .ju_scroll a.selected{background-color: #ff7f02; text-decoration: none;}
+        /*.ju_scroll a:hover span,*/
+        /*.ju_scroll a:hover b,*/
+        .ju_scroll a.selected span,
+        .ju_scroll a.selected b{display: block; background: #ff7f02;}
+        .ju_scroll span{ position: absolute; top: -1px; right: 27px; font-size: 14px; color: #FFF; width: 70px; height: 22px; line-height: 22px; text-align: center; background: none; display: none;}
+        .ju_scroll b{ width: 20px; height: 5px; position: absolute; top: 8px; right: 10px; background: none; display: none;}
+
+        .act_page_1{ height: 1400px; background: url(http://www.richardshepherd.com/smashing/parallax/images/puckered.png) top center;}
+        .act_page_2{ height: 1400px; background: url(http://www.richardshepherd.com/smashing/parallax/images/slide2.jpg) top center;}
+        .act_page_3{ height: 1400px; background: url(http://www.richardshepherd.com/smashing/parallax/images/slide4.jpg) top center;}
+        .act_page_4{ height: 1400px; background: url(http://www.richardshepherd.com/smashing/parallax/images/slide3.jpg) top center;}
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <!-- page -->
+    <div class="act_pages">
+        <div class="act_page act_page_1"></div>
+        <div class="act_page act_page_2"></div>
+        <div class="act_page act_page_3"></div>
+        <div class="act_page act_page_4"></div>
+    </div>
+
+    <div id="J_nav" data-snav=".act_page" data-offset="center" class="ju_scroll">
+        <a class="selected" href="javascript:;"><span>唤醒健康</span><b></b></a>
+        <a href="javascript:;"><span>睡眠篇</span><b></b></a>
+        <a href="javascript:;"><span>运动篇</span><b></b></a>
+        <a href="javascript:;"><span>工作篇</span><b></b></a>
+    </div>
+    <!-- act_scroll_nav -->
+
+</div>
+
+
+</body>
+</html>
